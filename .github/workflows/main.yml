@@ -24,7 +24,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
-      - uses: jacek-poreda-sonarsource/test-gh-action@master
+      - name: Check Quality Gate
+        uses: jacek-poreda-sonarsource/test-gh-action@master
         with:
           scanMetadataReportFile: './report-task.txt'
         env:
