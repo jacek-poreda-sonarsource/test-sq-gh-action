@@ -2,5 +2,5 @@ projectKey=js-test
 serverUrl=https://jacek.eu.ngrok.io
 serverVersion=9.0-SNAPSHOT
 dashboardUrl=https://jacek.eu.ngrok.io/dashboard?id=js-test
-ceTaskId=AXlar9zGhBnX6oSjv16q
-ceTaskUrl=https://jacek.eu.ngrok.io/api/ce/task?id=AXlar9zGhBnX6oSjv16q
+ceTaskId=AXla5Pz3hBnX6oSjv16r
+ceTaskUrl=https://jacek.eu.ngrok.io/api/ce/task?id=AXla5Pz3hBnX6oSjv16r
