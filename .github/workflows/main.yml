@@ -24,3 +24,4 @@ jobs:
           scanMetadataReportFile: './report-task.txt'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        timeout-minutes: 5
