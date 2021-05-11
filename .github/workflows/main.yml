@@ -21,6 +21,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: jacek-poreda-sonarsource/test-gh-action@master
         with:
-          scanMetadataReportFile: './report-task.txt'
+          scan-metadata-report-file: './report-task.txt'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
