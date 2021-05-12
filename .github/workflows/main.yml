@@ -19,18 +19,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Analyze with SonarQube
         uses: wouter-admiraal-sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
       - name: Check Quality Gate
-        uses: jacek-poreda-sonarsource/test-gh-action@master
+        uses: jacek-poreda-sonarsource/test-gh-action@test-no-docker-file
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         timeout-minutes: 5
