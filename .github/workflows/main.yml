@@ -1,4 +1,4 @@
-name: CI
+name: SonarQube Analysis and Quality Gate check
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
       - name: Check Quality Gate
-        uses: jacek-poreda-sonarsource/test-gh-action@test-no-docker-file
+        uses: jacek-poreda-sonarsource/test-gh-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         timeout-minutes: 5
