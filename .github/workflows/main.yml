@@ -29,6 +29,9 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
+      - name: Echo Debug
+        run: ls -la
+
 #       - name: Check Quality Gate
 #         uses: SonarSource/sonarqube-quality-gate-action@master
 #         env:
