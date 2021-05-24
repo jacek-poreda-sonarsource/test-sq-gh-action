@@ -33,6 +33,8 @@ jobs:
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
       - name: Echo workspace 1
         run: ls -la
+      - name: chmod .sonar
+        run: sudo chmod -R +r .sonar
 #       - name: Chown .sonar
 #         run: sudo chown -R runner:docker .sonar
 #       - name: Echo workspace 2
