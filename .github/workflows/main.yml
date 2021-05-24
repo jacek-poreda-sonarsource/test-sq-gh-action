@@ -27,6 +27,7 @@ jobs:
       - name: Analyze with SonarQube
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
+          SONAR_USER_HOME: "${GITHUB_WORKSPACE}/.sonar"
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
       - name: Echo Debug
