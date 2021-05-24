@@ -32,7 +32,7 @@ jobs:
       - name: Echo workspace 1
         run: ls -la
       - name: Chown .sonar
-        run: chown -R runner:docker .sonar
+        run: sudo chown -R runner:docker .sonar
       - name: Echo workspace 2
         run: ls -la
 #       - name: Check Quality Gate
