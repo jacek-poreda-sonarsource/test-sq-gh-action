@@ -34,11 +34,11 @@ jobs:
       - name: Echo workspace 1
         run: ls -la
       - name: chmod .sonar
-        run: sudo chmod -R +r .sonar
+        run: sudo chmod -R +rw .sonar
 #       - name: Chown .sonar
 #         run: sudo chown -R runner:docker .sonar
-#       - name: Echo workspace 2
-#         run: ls -la
+      - name: Echo workspace 2
+        run: ls -la
 #       - name: Check Quality Gate
 #         uses: SonarSource/sonarqube-quality-gate-action@master
 #         env:
