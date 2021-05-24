@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{github.workspace}}/.sonar
-          key: ${{ runner.os }}-sonar1-${{ hashFiles('${{github.workspace}}/.sonar/cache/*') }}
+          key: ${{ runner.os }}-sonar1-${{ hashFiles('.sonar/cache/*') }}
           restore-keys: |
             ${{ runner.os }}-sonar1-
       - name: Analyze with SonarQube
@@ -33,8 +33,10 @@ jobs:
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
       - name: Echo workspace 1
         run: ls -la
-      - name: Chown .sonar
-        run: sudo chown -R runner:docker .sonar
+#      - name: Chown .sonar
+#        run: sudo chown -R runner:docker .sonar
+      - name: Chmod .sonar
+        run: sudo chmod -R +r .sonar
       - name: Echo workspace 2
         run: ls -la
 #       - name: Check Quality Gate
