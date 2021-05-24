@@ -35,8 +35,8 @@ jobs:
         run: ls -la
 #      - name: Chown .sonar
 #        run: sudo chown -R runner:docker .sonar
-#       - name: Chmod .sonar
-#         run: sudo chmod -R +r .sonar
+      - name: Chmod .sonar
+        run: sudo chmod -R +r .sonar
       - name: Echo workspace 2
         run: ls -la
 #       - name: Check Quality Gate
