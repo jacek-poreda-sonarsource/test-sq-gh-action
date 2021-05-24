@@ -29,10 +29,12 @@ jobs:
           SONAR_USER_HOME: ${{github.workspace}}/.sonar
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://jacek.eu.ngrok.io
-      - name: Echo workspace
+      - name: Echo workspace 1
         run: ls -la
-      - name: Echo .sonar
-        run: ls -la .sonar
+      - name: Chown .sonar
+        run: chown -R runner:docker .sonar
+      - name: Echo workspace 2
+        run: ls -la
 #       - name: Check Quality Gate
 #         uses: SonarSource/sonarqube-quality-gate-action@master
 #         env:
