@@ -22,7 +22,9 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{github.workspace}}/.sonar
-          key: ${{ runner.os }}-sonar
+          key: ${{ runner.os }}-sonar-${{ hashFiles('${{github.workspace}}/.sonar/cache/*') }}
+          restore-keys: |
+            ${{ runner.os }}-sonar-
       - name: Analyze with SonarQube
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
